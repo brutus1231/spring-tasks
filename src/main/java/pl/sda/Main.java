@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -30,6 +31,17 @@ public class Main {
 
         Book book3 = context.getBean("myBook3", Book.class);
         System.out.println(book3.toString());
+
+        Book book4 = context.getBean("myBook4", Book.class);
+        System.out.println(book4.toString());
+
+        List<String> myList = context.getBean("myList", List.class);
+        myList.stream().forEach(System.out::println);
+
+        Map<String, String> myMap = context.getBean("myMap", Map.class);
+        myMap.entrySet().forEach(System.out::println);
+
+
 
         ((ConfigurableApplicationContext)context).close();
 
