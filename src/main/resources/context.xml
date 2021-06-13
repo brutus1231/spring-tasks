@@ -18,5 +18,15 @@
         <property name="text" value="To mój drugi program spring" />
     </bean>
 
+    <bean id="myBook" class="pl.sda.Book">
+        <property name="name" value="Harry Potter" />
+        <property name="author" ref="myAuthor" />
+    </bean>
+
+    <bean id="myAuthor" class="pl.sda.Author" >
+        <property name="firstName" value="Marcin" />
+        <property name="lastName" value="Kowalski" />
+    </bean>
+
     <context:annotation-config />
 </beans>

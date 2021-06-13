@@ -22,6 +22,9 @@ public class Main {
         System.out.println(extraMessageSingleton == extraMessageSingleton2);
         System.out.println(extraMessagePrototype == extraMessagePrototype2);
 
+        Book book = context.getBean(Book.class);
+        System.out.println(book.toString());
+
         ((ConfigurableApplicationContext)context).close();
 
 
