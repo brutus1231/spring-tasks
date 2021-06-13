@@ -28,5 +28,14 @@
         <property name="lastName" value="Kowalski" />
     </bean>
 
+    <bean id="myBook2" class="pl.sda.Book">
+        <property name="name" value="Harry Potter" />
+        <property name="author">
+            <bean id="myAuthor2" class="pl.sda.Author" >
+                <property name="firstName" value="Marcin" />
+                <property name="lastName" value="Kowalski" />
+            </bean>
+        </property>
+    </bean>
     <context:annotation-config />
 </beans>
