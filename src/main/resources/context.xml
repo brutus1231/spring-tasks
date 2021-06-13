@@ -4,4 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="myMessage" class="pl.sda.Message">
+        <property name="text" value="To mój pierwszy program spring" />
+    </bean>
 </beans>
