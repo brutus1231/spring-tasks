@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class Book {
 
-    private String firstName;
-    private String lastName;
+    private String name;
     private Author author;
 }
