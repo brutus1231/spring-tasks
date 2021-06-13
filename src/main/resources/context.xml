@@ -9,7 +9,7 @@
     </bean>
 
     <bean id="myExtraMessage1" class="pl.sda.ExtraMessage" scope="singleton"
-            init-method="init">
+            init-method="init" destroy-method="destroy">
         <property name="text" value="To mój drugi program spring" />
     </bean>
 

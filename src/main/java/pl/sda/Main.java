@@ -1,6 +1,7 @@
 package pl.sda;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
@@ -21,6 +22,7 @@ public class Main {
         System.out.println(extraMessageSingleton == extraMessageSingleton2);
         System.out.println(extraMessagePrototype == extraMessagePrototype2);
 
+        ((ConfigurableApplicationContext)context).close();
 
 
     }
