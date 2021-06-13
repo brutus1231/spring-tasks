@@ -8,8 +8,12 @@
         <property name="text" value="To mój pierwszy program spring" />
     </bean>
 
-    <bean class="pl.sda.ExtraMessage">
+    <bean id="myExtraMessage1" class="pl.sda.ExtraMessage" scope="singleton"
+            init-method="init">
         <property name="text" value="To mój drugi program spring" />
     </bean>
 
+    <bean id="myExtraMessage2" class="pl.sda.ExtraMessage" scope="prototype">
+        <property name="text" value="To mój drugi program spring" />
+    </bean>
 </beans>
