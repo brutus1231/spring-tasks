@@ -57,5 +57,7 @@
         <entry key="myKey1" value="myValue1"></entry>
     </util:map>
 
+    <bean id="myPerson" class="pl.sda.Person" />
+
     <context:annotation-config />
 </beans>
