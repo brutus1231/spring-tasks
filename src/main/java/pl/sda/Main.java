@@ -25,6 +25,12 @@ public class Main {
         Book book = context.getBean("myBook", Book.class);
         System.out.println(book.toString());
 
+        Book book2 = context.getBean("myBook2", Book.class);
+        System.out.println(book2.toString());
+
+        Book book3 = context.getBean("myBook3", Book.class);
+        System.out.println(book3.toString());
+
         ((ConfigurableApplicationContext)context).close();
 
 
