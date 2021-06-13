@@ -41,8 +41,11 @@ public class Main {
         Map<String, String> myMap = context.getBean("myMap", Map.class);
         myMap.entrySet().forEach(System.out::println);
 
-        Person person = context.getBean(Person.class);
+        Person person = context.getBean("myPerson", Person.class);
         System.out.println(person.toString());
+
+        Student student = context.getBean("myStudent", Student.class);
+        System.out.println(student.toString());
 
         ((ConfigurableApplicationContext)context).close();
 

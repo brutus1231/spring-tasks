@@ -57,7 +57,16 @@
         <entry key="myKey1" value="myValue1"></entry>
     </util:map>
 
-    <bean id="myPerson" class="pl.sda.Person" />
+    <bean id="myPerson" class="pl.sda.Person" >
+        <property name="firstName" value="Aleksander"/>
+        <property name="lastName" value="Nowak" />
+    </bean>
+
+    <bean id="myStudent" class="pl.sda.Student">
+        <property name="firstName" value="#{myPerson.firstName}" />
+        <property name="lastName" value="#{myPerson.lastName}" />
+        <property name="collageName" value="Harvard" />
+    </bean>
 
     <context:annotation-config />
 </beans>
